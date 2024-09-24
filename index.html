@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifa App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Aplicación de Rifas</h1>
+
+    <div id="form-container">
+        <h2>Registro para la Rifa</h2>
+        <form id="raffle-form">
+            <label for="firstName">Nombre:</label>
+            <input type="text" id="firstName" required>
+
+            <label for="lastName">Apellido:</label>
+            <input type="text" id="lastName" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="idCard">Cédula de Identidad:</label>
+            <input type="text" id="idCard" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+
+            <label for="raffleId">Rifa:</label>
+            <select id="raffleId">
+                <option value="" selected disabled>Seleccione</option>
+            </select>
+
+            <h3>Seleccione los números</h3>
+            <div id="numbers-container" hidden>
+                <!-- Números generados dinámicamente -->
+            </div>
+
+            <button type="button" id="random-number-btn" hidden>Asignar número aleatorio</button>
+
+            <button type="submit" id="form-btn-submit" hidden>Participar</button>
+        </form>
+
+        <button id="payment-btn" style="display:none;">Realizar pago</button>
+        <p id="payment-status"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
